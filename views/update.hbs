@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    <section>
+
+    <div class="wrapper">
+
+        <div class="title">Update Data</div>
+
+        <form action="/data/update" method="POST" class="form">
+            <div class="inputfield">
+                <label>Address</label>
+                <input value="" class="input" name="address"><br>
+            </div>
+            <div class="inputfield">
+                <label>Number</label>
+                <input value="" class="input" name="number"><br>
+            </div>
+            <div class="inputfield">
+                <button type="submit" class="btn">Update Data</button>
+            </div>
+        </form>
+
+    </div>
+
+    </section>
+
+    {{>footer}}
+
+</body>
+
+</html>

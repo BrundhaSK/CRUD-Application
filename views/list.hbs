@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+</head>
+
+<body>
+    
+    {{>navbar}}
+
+    <section>
+    <div class="container">
+        <div class="title">View Data</div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Number</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {{#each data}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{address}}</td>
+                <td>{{number}}</td>
+                <td><a href="/data/update/{{id}}"><button class="btn">Update</button></a></td>
+                <td><a href="/data/delete/{{id}}"><button class="btn">Delete</button></a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    </section>
+
+    {{>footer}}
+
+</body>
+
+</html>
